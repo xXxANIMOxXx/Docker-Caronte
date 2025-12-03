@@ -9,7 +9,6 @@ main(){
     newUser
     configurar_ssh
     configurar_sudo
-    tail -f /dev/null
 }
 
 main
