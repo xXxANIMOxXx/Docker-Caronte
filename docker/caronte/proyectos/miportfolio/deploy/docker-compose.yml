@@ -1,0 +1,8 @@
+services:
+  portfolio:
+    image: vila/nginx
+    container_name: portcont
+    ports:
+      - 23232:23
+    volumes:
+      - ../src:/var/
