@@ -5,7 +5,7 @@ configurar_ssh() {
   # Deshabilitar el login de root
   sed -i 's/#PermitRootLogin./PermitRootLogin no/' /etc/ssh/sshd_config
   # Cambiar el puerto de SSH
-  sed -i 's/#Port./Port '$PORT_SSH'/' /etc/ssh/sshd_config
+  sed -i 's/#Port./Port 23456/' /etc/ssh/sshd_config
 
   service ssh restart # ESTO DARÁ PROBLEMAS A FUTURO POR LO QUE USAREMOS EL QUE HAY COMENTADO ABAJO
   mkdir -p /run/sshd
