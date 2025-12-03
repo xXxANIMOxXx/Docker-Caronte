@@ -1,6 +1,6 @@
 #!/bin/bash
 config_nginx() {
-    nginx 
+    nginx &
 }
 
 load_entrypoint_base(){
@@ -10,7 +10,6 @@ load_entrypoint_base(){
 main(){
  load_entrypoint_base
  config_nginx
- tail -f /dev/null
 
 }
 

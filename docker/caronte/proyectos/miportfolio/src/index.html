@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <header>
+        <nav class="nav">
+            <div class="logo">MiPortfolio</div>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sobre-mi">Sobre mí</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Sección Inicio -->
+        <section id="inicio" class="section hero">
+            <div class="hero-text">
+                <h1>Hola, soy <span>Tu Nombre</span></h1>
+                <p>Desarrollador/a web junior en busca de nuevos retos.</p>
+                <button id="btn-contacto">Contáctame</button>
+            </div>
+        </section>
+
+        <!-- Sección Sobre mí -->
+        <section id="sobre-mi" class="section">
+            <h2>Sobre mí</h2>
+            <p>
+                Escribe aquí una breve descripción sobre ti: quién eres, qué te gusta,
+                qué tecnologías conoces, y qué tipo de proyectos te interesan.
+            </p>
+        </section>
+
+        <!-- Sección Proyectos -->
+        <section id="proyectos" class="section">
+            <h2>Proyectos</h2>
+            <div class="proyectos-grid">
+                <article class="proyecto">
+                    <h3>Proyecto 1</h3>
+                    <p>Breve descripción de tu primer proyecto.</p>
+                    <a href="#" target="_blank">Ver proyecto</a>
+                </article>
+                <article class="proyecto">
+                    <h3>Proyecto 2</h3>
+                    <p>Breve descripción de tu segundo proyecto.</p>
+                    <a href="#" target="_blank">Ver proyecto</a>
+                </article>
+                <article class="proyecto">
+                    <h3>Proyecto 3</h3>
+                    <p>Breve descripción de tu tercer proyecto.</p>
+                    <a href="#" target="_blank">Ver proyecto</a>
+                </article>
+            </div>
+        </section>
+
+        <!-- Sección Contacto -->
+        <section id="contacto" class="section">
+            <h2>Contacto</h2>
+            <form id="form-contacto">
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Correo</label>
+                    <input type="email" id="email" name="email" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+                </div>
+
+                <button type="submit">Enviar</button>
+                <p id="mensaje-estado" class="mensaje-estado"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Tu Nombre. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="javascript.js"></script>
+</body>
+
+</html>
