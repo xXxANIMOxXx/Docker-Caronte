@@ -1,5 +1,22 @@
 services:
-  build:
-    context: /home/vila/vilahlc/docker/caronte/
-    dockerfile: ./dockerfiles/base/ubbase 
+  web:
+    build:
+      context: /home/vila/vilahlc/docker/caronte/
+      dockerfile: ./dockerfiles/base/ubbase 
     container_name: ${CONTAINER_NAME}
+    ports:
+      - "${PORT}:80"
+    env_file:
+      - ./.env
+    volumes:
+      - ./logs:/root/logs
+    networks:
+      netcaronte:
+        ipv4_address: ${IP}
+networks:
+  netcaronte:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: ${SUBNET}
