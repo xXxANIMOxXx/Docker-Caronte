@@ -1,0 +1,5 @@
+services:
+  build:
+    context: /home/vila/vilahlc/docker/caronte/
+    dockerfile: ./dockerfiles/base/ubbase 
+    container_name: ${CONTAINER_NAME}
